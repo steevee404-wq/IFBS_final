@@ -1,0 +1,187 @@
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+h1,
+h2,
+h3,
+.display {
+  font-family: "Fraunces", serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* image placeholder — same convention as school-outings.css */
+.frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--main);
+}
+.frame::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  color: rgba(245, 245, 220, 0.4);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px dashed rgba(245, 245, 220, 0.22);
+  margin: 8px;
+  pointer-events: none;
+}
+.frame img {
+  opacity: 0;
+  transition: transform 0.7s ease;
+}
+.frame:has(img[src]:not([src=""]))::after {
+  display: none;
+}
+.frame:has(img[src]:not([src=""])) img {
+  opacity: 1;
+}
+.frame:hover img {
+  transform: scale(1.04);
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* ================= INTRO ================= */
+.intro {
+  padding: 88px 0 56px;
+  text-align: center;
+}
+.intro .eyebrow {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.intro .eyebrow::before,
+.intro .eyebrow::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+.intro h2 {
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--main);
+  max-width: 24ch;
+  margin: 0 auto 18px;
+}
+.intro p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+/* ================= CLUB ROWS (horizontal bands) ================= */
+.clubs {
+  padding: 10px 0 30px;
+}
+
+.club-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 64px 0;
+  border-bottom: 1px solid rgba(0, 33, 71, 0.1);
+}
+.club-row:last-child {
+  border-bottom: none;
+}
+.club-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.club-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.club-index {
+  display: block;
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.club-text h3 {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 500;
+  color: var(--main);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.club-text p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #4a4a4a;
+  max-width: 52ch;
+}
+
+.club-images {
+  flex: 1 1 0;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.club-images .frame {
+  height: 230px;
+  border-radius: 2px;
+}
+.club-images .frame:nth-child(2) {
+  margin-top: 34px;
+}
+.club-row.reverse .club-images .frame:nth-child(2) {
+  margin-top: 34px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .club-row,
+  .club-row.reverse {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    padding: 48px 0;
+  }
+  .club-images .frame:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .club-images {
+    grid-template-columns: 1fr;
+  }
+  .club-images .frame {
+    height: 200px;
+  }
+}

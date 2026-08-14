@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/about-style.css">
+    <title>International Franco-British School</title>
+    <!-- Assuming your scripts are in the correct directories based on your original file -->
+    <script src="../scripts/script_about.js"></script>
+    <script src="../scripts/script.js"></script>
+</head>
+<body>
+
+    <nav class="top-bar">
+        <ul>
+            <li>Phone: +216 XXX XXX XX — Email: contact@ifbs.org</li>
+            <li><a href="#" class="register-button">Register Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <video class="vidBG" autoplay muted loop playsinline>
+            <source src="https://bisc.ma/wp-content/uploads/2025/03/Promotion_Student_BISC_website_banner.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-text">
+            <h4>Welcome to</h4>
+            <h1>International Franco-British School</h1>
+        </div>
+
+                <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav class="main-menu">
+            <ul class="mainul">
+                <li class="has-dropdown" onmouseenter="dropdown('spirit')" onmouseleave="resetdropdown('spirit')">
+                    The spirit of IFBS
+                    <div id="spirit" class="dropdown" onmouseenter="keepDropdown('spirit')" onmouseleave="resetdropdown('spirit')">
+                        <ul>
+                            <li><a href="aboutIFBS.html">About IFBS</a></li>
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="governors.html">Governors</a></li>
+                            <li><a href="pastoral-wellbeing.html">Pastoral wellbeing</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="building.html">Building</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-dropdown" onmouseenter="dropdown('british')" onmouseleave="resetdropdown('british')">
+                    Academic
+                    <div id="british" class="dropdown" onmouseenter="keepDropdown('british')" onmouseleave="resetdropdown('british')">
+                        <ul>
+                            <li><a href="../academic/excellence.html">Academic excellence</a></li>
+                            <li><a href="../academic/early-years.html">EYFS</a></li>
+                            <li><a href="../academic/primary-education.html">Primary Education</a></li>
+                            <li><a href="../academic/secondary-education.html">Secondary Education</a></li>
+                            <li><a href="../academic/br-further.html">Further</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-dropdown" onmouseenter="dropdown('french')" onmouseleave="resetdropdown('french')">
+                    Accreditation
+                    <div id="french" class="dropdown" onmouseenter="keepDropdown('french')" onmouseleave="resetdropdown('french')">
+                        <ul>
+                            <li><a href="../accreditation/tunisian-acc.html">Tunisian ministry of education</a></li>
+                            <li><a href="../accreditation/cambridge-acc.html">Cambridge Accreditation</a></li>
+                            <li><a href="../accreditation/pearson-acc.html">Pearson (coming soon)</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../index.html"><img class="menu-logo" src="../assets/logo.png" alt="IFBS logo"></a></li>
+
+
+                <li class="has-dropdown" onmouseenter="dropdown('extracurricular')" onmouseleave="resetdropdown('extracurricular')">
+                    Extracurricular
+                    <div id="extracurricular" class="dropdown" onmouseenter="keepDropdown('extracurricular')" onmouseleave="resetdropdown('extracurricular')">
+                        <ul>
+                            <li><a href="../extracurricular/clubs.html">Clubs</a></li>
+                            <li><a href="../extracurricular/school-outings.html">School Outings</a></li>
+                            <li><a href="../extracurricular/summer-camp.html">Summer Camp</a></li>
+                            <li><a href="../extracurricular/special-needs.html">Special needs care & tutoring</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-dropdown" onmouseenter="dropdown('school_documents')" onmouseleave="resetdropdown('school_documents')">
+                    School Documents
+                    <div id="school_documents" class="dropdown" onmouseenter="keepDropdown('school_documents')" onmouseleave="resetdropdown('school_documents')">
+                        <ul>
+                            <li><a href="#">Academic Calendar</a></li>
+                            <li><a href="#">Cambridge Curriculum</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-dropdown" onmouseenter="dropdown('admissions')" onmouseleave="resetdropdown('admissions')">
+                    Admissions
+                    <div id="admissions" class="dropdown" onmouseenter="keepDropdown('admissions')" onmouseleave="resetdropdown('admissions')">
+                        <ul>
+                            <li><a href="../admissions/open-days.html">Open days</a></li>
+                            <li><a href="../admissions/admission-process.html">Admission Process</a></li>
+                            <li><a href="../admissions/admission-documents.html">Admission documents</a></li>
+                            <li><a href="../admissions/register.html">Register</a></li>
+                            <li><a href="../contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <div class="main-spirit">
+        <div class="layout-container">
+            <div class="content-column">
+                <div class="subtitle">Why Choose Us</div>
+                <div class="title">About our School</div>
+                <div class="description">
+Founded in 2021, The International Franco-British School offers a premier education designed to cultivate curious, confident, and global-minded learners. Grounded in a rich European heritage and built upon the world-renowned British educational framework, our school provides a dynamic environment where academic rigor meets creative inquiry. We empower students with sharp critical thinking skills, intercultural empathy, and the adaptability needed to excel on the global stage. Through a warm, student-centered community, we inspire every individual to discover their passions, setting the foundation for lifelong success and leadership in an interconnected world.                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-col">
+                        <div class="feature-item">
+                            <div class="check-mark">&#10003;</div>
+                            <div class="feature-text">iGCSE</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="check-mark">&#10003;</div>
+                            <div class="feature-text">AS Level</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="check-mark">&#10003;</div>
+                            <div class="feature-text">A2 Level</div>
+                        </div>
+                    </div>
+                    <div class="feature-col">
+                        <div class="feature-item">
+                            <div class="check-mark">&#10003;</div>
+                            <div class="feature-text">BTEC</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="check-mark">&#10003;</div>
+                            <div class="feature-text">IELTS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-column">
+                <div class="img-wrapper img-left">
+                    <img src="../assets/pedir.webp" alt="Students interacting">
+                </div>
+                <div class="img-wrapper img-right">
+                    <img src="../assets/pedir.webp" alt="Student learning">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-british-section">
+        <div class="image-cycler">
+            <img src="../assets/pedir.webp" class="active" alt="Student smiling">
+            <img src="../assets/pedir.webp" alt="Student learning">
+        </div>
+        <div class="text-content">
+            <div class="main-title text-gold">Why choose a British style education?</div>
+            <div class="intro-text">
+                Ultimately, the characteristics of British education are what truly determine the effectiveness of our school. Our commitment to education is based on teaching processes which have proven successful for generations in the UK, and by integrating them with our unique Moroccan twist we know this style of education best suits the needs of our student's.
+            </div>
+            <div class="sub-text">
+                However, what truly sets us apart from other international schools is the advantages that only our British system can offer:
+            </div>
+            <div class="features-list">
+                <div class="feature-row">
+                    <div class="check-mark-gold">&#10003;</div>
+                    <div class="feature-info">
+                        <div class="feature-title text-gold">Quality pre-university education</div>
+                        <div class="feature-desc">Our system prepares students for their time at university.</div>
+                    </div>
+                </div>
+                <div class="feature-row">
+                    <div class="check-mark-gold">&#10003;</div>
+                    <div class="feature-info">
+                        <div class="feature-title text-gold">Globally accredited qualifications</div>
+                        <div class="feature-desc">iGCSE, A Level and BTEC qualifications are universally recognised.</div>
+                    </div>
+                </div>
+                <div class="feature-row">
+                    <div class="check-mark-gold">&#10003;</div>
+                    <div class="feature-info">
+                        <div class="feature-title text-gold">A proven academic environment</div>
+                        <div class="feature-desc">All our students have gone on to access tertiary education at different universities around the world.</div>
+                    </div>
+                </div>
+                <div class="feature-row">
+                    <div class="check-mark-gold">&#10003;</div>
+                    <div class="feature-info">
+                        <div class="feature-title text-gold">A holistic approach</div>
+                        <div class="feature-desc">Education is not simply confined to the classroom and so our co-curricular programme allows everyone to find their true niche in life.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-note">
+                Therefore, be part of this amazing journey and come to see why IFBS is the best choice for your child's educational journey.
+            </div>
+        </div>
+    </div>
+
+    <section class="our-values">
+        <div class="values-overlay">
+            <div class="subtitle-center text-white" style="margin-bottom: 25px;">OUR VALUES</div>
+            <p class="values-desc">Education at IFBS is a precious and profound gift. It has the power to influence the course of a child's life and ultimately, shapes who we all are and what we believe in.</p>
+            <p class="values-desc">Therefore, the foundations of our school are laid on the following four key values:</p>
+            <div class="values-row">
+                <span>Respect</span>
+                <span>Excellence</span>
+                <span>Compassion</span>
+                <span>Rigour</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="split-section box-layout">
+        <div class="split-text bg-white">
+            <div class="subtitle text-maroon">CELEBRATING DIVERSITY</div>
+            <div class="main-title text-maroon">Embracing Global Cultures</div>
+            <p class="intro-text text-dark">With over 57 differing nationalities from Europe, North & South America, Asia, Africa, and Oceana we are truly an international school. As you would expect, we joyfully celebrate the numerous special global events which happen throughout the year; from the delights of our Winter Fair to the solemnity observed during Ramadan, we encourage all our students to be respectful of each other's culture.</p>
+        </div>
+        <div class="split-img" style="background-image: url('../assets/pedir.webp');"></div>
+    </div>
+
+    <div class="split-section box-layout flex-reverse">
+        <div class="split-text bg-maroon">
+            <p class="intro-text text-white" style="font-size: 20px; font-family: 'Playfair Display', serif; line-height: 1.8;">We prepare our community of students to be confident global leaders in tomorrow's world – constantly curious, kind and changing. Morocco has always been an outward looking country and so we want our students to be as curious and ambitious as their antecedents.</p>
+        </div>
+        <div class="split-img" style="background-image: url('../assets/pedir.webp');"></div>
+    </div>
+
+    <div class="split-section box-layout">
+        <div class="split-img" style="background-image: url('../assets/pedir.webp');"></div>
+        <div class="split-text bg-maroon align-center">
+            <div class="subtitle text-gold">MISSION</div>
+            <p class="intro-text text-white">To build on the proven quality of the British curriculum while fostering an international perspective towards education. To champion academic excellence and create an inspiring place for children and young people to act and achieve the best version of themselves.</p>
+        </div>
+    </div>
+
+    <div class="motto-banner">
+        ‘Aspire, Act, Achieve’
+    </div>
+
+    <section class="school-aims">
+        <div class="aims-content">
+            <div class="subtitle-center text-white">STATEMENT OF SCHOOL AIMS</div>
+            <div class="main-title text-white text-center">Statement of School Aims</div>
+            <div class="aims-grid">
+                <p>The International Franco-British School is a vibrant, co-educational school which balances its modern outlook with traditional British values. We aim to provide the highest standards of learning and teaching to ensure all our students fulfil their academic potential regardless of their ability.</p>
+                <p>The school also provides compassionate and dedicated pastoral support throughout all levels of the school via its highly effective pastoral system. This means each student feels valued, respected, and supported throughout their time at IFBS.</p>
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="#" class="btn-yellow">READ MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="teachers-section">
+        <div class="subtitle-center" style="color: #681b3c;">IFBS GOVERNORS</div>
+        <div class="main-title text-maroon text-center">Governors profiles</div>
+        <div class="teachers-grid">
+            <div class="teacher-card"><img src="../assets/pedir.webp" alt="Governor"></div>
+            <div class="teacher-card"><img src="../assets/pedir.webp" alt="Governor"></div>
+            <div class="teacher-card"><img src="../assets/pedir.webp" alt="Governor"></div>
+            <div class="teacher-card"><img src="../assets/pedir.webp" alt="Governor"></div>
+        </div>
+        <div class="text-center">
+            <a href="#" class="btn-yellow">VISIT ALL GOVERNORS PROFILES</a>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="wrap">
+            <div class="cta-text">
+                <div class="kicker">From 3 to 18 years old</div>
+                <div class="headline">Admissions Open</div>
+            </div>
+            <a href="#" class="cta-btn">Register Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <div class="crest">
+                    <img src="../assets/logo.png" alt="IFBS crest">
+                </div>
+                <p class="school-name">International Franco-British School</p>
+                <p class="school-tag">La Marsa, Tunisia</p>
+
+                <address>
+                    66 Rue de l'Or<br>
+                    ZI la Marsa, 2046
+                </address>
+
+                <a class="contact-link" href="tel:+21698119811">(+216) 98 119 811</a>
+                <a class="contact-link" href="mailto:admissions@ifbs.tn">admissions@ifbs.tn</a>
+
+                <div class="socials">
+                    <a href="https://www.facebook.com/InternationalFrancoBritishSchool" aria-label="Facebook">f</a>
+                    <a href="https://www.instagram.com/ifbstunisie/" aria-label="Instagram">ig</a>
+                    <a href="https://www.linkedin.com/company/ifbschool/" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>IFBS</h3>
+                <ul>
+                    <li><a href="../spirit of ifbs/aboutIFBS.html">About IFBS</a></li>
+                    <li><a href="../spirit of ifbs/mission.html">Our Mission</a></li>
+                    <li><a href="../spirit of ifbs/governors.html">Governance</a></li>
+                    <li><a href="../spirit of ifbs/pastoral-wellbeing.html">Pastoral Care</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="#">Recruitment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Academic</h3>
+                <ul>
+                    <li><a href="../academic/excellence.html">Academic Excellence</a></li>
+                    <li><a href="../academic/early-years.html">Early Years</a></li>
+                    <li><a href="../academic/primary-education.html">Primary Education</a></li>
+                    <li><a href="../academic/secondary-education.html">Secondary Education</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Admissions</h3>
+                <ul>
+                    <li><a href="../admissions/admission-process.html">Admission Process</a></li>
+                    <li><a href="../admissions/admission-documents.html">Required Documents</a></li>
+                </ul>
+            </div>
+            <img class="bg-logo-footer"src="../assets/logo-blended.png" alt="">
+        </div>
+    </footer>
+
+</body>
+</html>

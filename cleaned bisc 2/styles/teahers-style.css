@@ -1,0 +1,117 @@
+/* ====================== MAIN ====================== */
+.slt {
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slt-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: clamp(30px, 4vw, 44px);
+  color: var(--main-lighter);
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+}
+
+.slt-sub {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gold);
+  margin-bottom: 56px;
+}
+
+.slt-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.slt-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slt-frame {
+  width: 100%;
+  aspect-ratio: 3/2;
+  position: relative;
+  clip-path: url(#slt-shield);
+  background: var(--navy-deep);
+  overflow: hidden;
+  box-shadow: 0 18px 36px -18px rgba(15, 31, 56, 0.45);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 8px 4px 4px var(--main);
+}
+
+.slt-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(45%);
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.slt-card:hover .slt-frame img {
+  transform: scale(1.04);
+  filter: grayscale(0%) contrast(1.05);
+}
+
+.slt-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(184, 146, 63, 0) 60%,
+    rgba(15, 31, 56, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+.slt-name {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--navy);
+  margin-top: 22px;
+}
+
+.slt-role {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.slt-rule {
+  width: 28px;
+  height: 2px;
+  background: var(--gold-soft);
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .slt-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 28px;
+  }
+}
+@media (max-width: 520px) {
+  .slt-grid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    margin-inline: auto;
+  }
+}

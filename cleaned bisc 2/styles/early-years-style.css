@@ -1,0 +1,177 @@
+* { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--navy-deep);
+    background: #ffffff;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .placeholder-img {
+    background: repeating-linear-gradient(
+      45deg, #e6e6e6, #e6e6e6 10px, #eeeeee 10px, #eeeeee 20px
+    );
+    border: 1px solid #d8d8d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9a9a9a;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* ============ INTRO ============ */
+
+  .intro {
+    padding: 70px 0 50px;
+  }
+
+  .intro h1 {
+    font-family: var(--serif);
+    color: var(--navy);
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin: 0 0 6px;
+  }
+
+  .intro .rule {
+    width: 56px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 0 26px;
+  }
+
+  .intro p {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--navy-deep);
+    margin: 0 0 18px;
+    max-width: 680px;
+  }
+
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* ============ IMAGE STRIP ============ */
+
+  .image-strip {
+    padding: 0 0 60px;
+  }
+
+  /* ============ FOUR THEMES — SIMPLE NUMBERED LIST ============ */
+
+  .themes {
+    padding: 10px 0 60px;
+    border-top: 1px solid #e6e4e0;
+  }
+
+  .themes h2 {
+    font-family: var(--serif);
+    color: var(--navy);
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 50px 0 30px;
+  }
+
+  .theme-row {
+    display: flex;
+    gap: 22px;
+    padding: 22px 0;
+    border-bottom: 1px solid #ececea;
+  }
+
+  .theme-row:first-of-type {
+    border-top: 1px solid #ececea;
+  }
+
+  .theme-num {
+    font-family: var(--serif);
+    color: var(--gold);
+    font-size: 1.3rem;
+    min-width: 34px;
+    flex-shrink: 0;
+  }
+
+  .theme-body h3 {
+    font-size: 1.02rem;
+    color: var(--navy);
+    margin: 0 0 6px;
+    font-weight: 700;
+  }
+
+  .theme-body p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* ============ AREAS OF LEARNING — SIMPLE TWO COLUMN LIST ============ */
+
+  .areas {
+    background: var(--grey-bg);
+    padding: 60px 0 70px;
+  }
+
+  .areas h2 {
+    font-family: var(--serif);
+    color: var(--navy);
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 0 0 10px;
+  }
+
+  .areas > .wrap > p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--navy-deep);
+    max-width: 640px;
+    margin: 0 0 34px;
+  }
+
+  .areas-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 50px;
+  }
+
+  .areas-list div {
+    padding: 14px 0;
+    border-bottom: 1px solid #dedad4;
+    font-size: 0.95rem;
+    color: var(--navy-deep);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .areas-list div::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold-soft);
+    display: inline-block;
+    flex-shrink: 0;
+    transform: translateY(-2px);
+  }
+
+  /* ============ RESPONSIVE ============ */
+
+  @media (max-width: 640px) {
+    .intro { padding: 50px 0 36px; }
+    .intro h1 { font-size: 1.9rem; }
+    .themes h2, .areas h2 { font-size: 1.4rem; }
+    .theme-row { gap: 16px; padding: 18px 0; }
+    .areas-list { grid-template-columns: 1fr; }
+    .areas { padding: 46px 0 54px; }
+    .themes { padding: 0 0 46px; }
+  }

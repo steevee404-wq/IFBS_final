@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>International Franco-British School</title>
+    <script src="../scripts/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <nav class="top-bar">
+        <ul>
+            <li>Phone: +216 XXX XXX XX — Email: contact@ifbs.org</li>
+            <li><a href="#" class="register-button">Register Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <video class="vidBG" autoplay muted loop playsinline>
+            <source src="https://bisc.ma/wp-content/uploads/2025/03/Promotion_Student_BISC_website_banner.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-text">
+            <h4>Welcome to</h4>
+            <h1>International Franco-British School</h1>
+        </div>
+
+                <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav class="main-menu">
+            <ul class="mainul">
+                <li class="has-dropdown" onmouseenter="dropdown('spirit')" onmouseleave="resetdropdown('spirit')">
+                    The spirit of IFBS
+                    <div id="spirit" class="dropdown" onmouseenter="keepDropdown('spirit')" onmouseleave="resetdropdown('spirit')">
+                        <ul>
+                            <li><a href="../spirit of ifbs/aboutIFBS.html">About IFBS</a></li>
+                            <li><a href="../spirit of ifbs/mission.html">Mission</a></li>
+                            <li><a href="../spirit of ifbs/governors.html">Governors</a></li>
+                            <li><a href="../spirit of ifbs/pastoral-wellbeing.html">Pastoral wellbeing</a></li>
+                            <li><a href="../spirit of ifbs/news.html">News</a></li>
+                            <li><a href="../spirit of ifbs/building.html">Building</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-dropdown" onmouseenter="dropdown('british')" onmouseleave="resetdropdown('british')">
+                    Academic
+                    <div id="british" class="dropdown" onmouseenter="keepDropdown('british')" onmouseleave="resetdropdown('british')">
+                        <ul>
+                            <li><a href="../academic/excellence.html">Academic excellence</a></li>
+                            <li><a href="../academic/early-years.html">EYFS</a></li>
+                            <li><a href="../academic/primary-education.html">Primary Education</a></li>
+                            <li><a href="../academic/secondary-education.html">Secondary Education</a></li>
+                            <li><a href="../academic/br-further.html">Further</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-dropdown" onmouseenter="dropdown('french')" onmouseleave="resetdropdown('french')">
+                    Accreditation
+                    <div id="french" class="dropdown" onmouseenter="keepDropdown('french')" onmouseleave="resetdropdown('french')">
+                        <ul>
+                            <li><a href="../accreditation/tunisian-acc.html">Tunisian ministry of education</a></li>
+                            <li><a href="../accreditation/cambridge-acc.html">Cambridge Accreditation</a></li>
+                            <li><a href="../accreditation/pearson-acc.html">Pearson (coming soon)</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../index.html"><img class="menu-logo" src="../assets/logo.png" alt="IFBS logo"></a></li>
+
+
+                <li class="has-dropdown" onmouseenter="dropdown('extracurricular')" onmouseleave="resetdropdown('extracurricular')">
+                    Extracurricular
+                    <div id="extracurricular" class="dropdown" onmouseenter="keepDropdown('extracurricular')" onmouseleave="resetdropdown('extracurricular')">
+                        <ul>
+                            <li><a href="../extracurricular/clubs.html">Clubs</a></li>
+                            <li><a href="../extracurricular/school-outings.html">School Outings</a></li>
+                            <li><a href="../extracurricular/summer-camp.html">Summer Camp</a></li>
+                            <li><a href="../extracurricular/special-needs.html">Special needs care & tutoring</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-dropdown" onmouseenter="dropdown('school_documents')" onmouseleave="resetdropdown('school_documents')">
+                    School Documents
+                    <div id="school_documents" class="dropdown" onmouseenter="keepDropdown('school_documents')" onmouseleave="resetdropdown('school_documents')">
+                        <ul>
+                            <li><a href="#">Academic Calendar</a></li>
+                            <li><a href="#">Cambridge Curriculum</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-dropdown" onmouseenter="dropdown('admissions')" onmouseleave="resetdropdown('admissions')">
+                    Admissions
+                    <div id="admissions" class="dropdown" onmouseenter="keepDropdown('admissions')" onmouseleave="resetdropdown('admissions')">
+                        <ul>
+                            <li><a href="../admissions/open-days.html">Open days</a></li>
+                            <li><a href="../admissions/admission-process.html">Admission Process</a></li>
+                            <li><a href="../admissions/admission-documents.html">Admission documents</a></li>
+                            <li><a href="../admissions/register.html">Register</a></li>
+                            <li><a href="../contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Placeholder content -->
+    <section style="padding:6rem 1.5rem; text-align:center; font-family:'Source Sans 3', sans-serif;">
+        <h2 style="font-family:'Fraunces', serif;">Admission Process</h2>
+        <p>This page is coming soon. Please check back later.</p>
+    </section>
+
+    <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta-text">
+        <div class="kicker">From 3 to 18 years old</div>
+        <div class="headline">Admissions Open</div>
+      </div>
+      <a href="../admissions/register.html" class="cta-btn">Register Now</a>
+    </div>
+  </section>
+
+    <footer>
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <div class="crest">
+                    <img src="../assets/logo.png" alt="IFBS crest">
+                </div>
+                <p class="school-name">International Franco-British School</p>
+                <p class="school-tag">La Marsa, Tunisia</p>
+
+                <address>
+                    66 Rue de l'Or<br>
+                    ZI la Marsa, 2046
+                </address>
+
+                <a class="contact-link" href="tel:+21698119811">(+216) 98 119 811</a>
+                <a class="contact-link" href="mailto:admissions@ifbs.tn">admissions@ifbs.tn</a>
+
+                <div class="socials">
+                    <a href="https://www.facebook.com/InternationalFrancoBritishSchool" aria-label="Facebook">f</a>
+                    <a href="https://www.instagram.com/ifbstunisie/" aria-label="Instagram">ig</a>
+                    <a href="https://www.linkedin.com/company/ifbschool/" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>IFBS</h3>
+                <ul>
+                    <li><a href="../spirit of ifbs/aboutIFBS.html">About IFBS</a></li>
+                    <li><a href="../spirit of ifbs/mission.html">Our Mission</a></li>
+                    <li><a href="../spirit of ifbs/governors.html">Governance</a></li>
+                    <li><a href="../spirit of ifbs/pastoral-wellbeing.html">Pastoral Care</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="#">Recruitment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Academic</h3>
+                <ul>
+                    <li><a href="../academic/excellence.html">Academic Excellence</a></li>
+                    <li><a href="../academic/early-years.html">Early Years</a></li>
+                    <li><a href="../academic/primary-education.html">Primary Education</a></li>
+                    <li><a href="../academic/secondary-education.html">Secondary Education</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Admissions</h3>
+                <ul>
+                    <li><a href="../admissions/admission-process.html">Admission Process</a></li>
+                    <li><a href="../admissions/admission-documents.html">Required Documents</a></li>
+                </ul>
+            </div>
+            <img class="bg-logo-footer"src="../assets/logo-blended.png" alt="">
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+fi missions.html : 
+
+    bech tel9a fama 
+    
+    <div class="icon">&#9733;</div>
+
+    hehdokma ken t7eb badalhom choufelhom icons mezyenin wala whatever u see fits 5tr
+    el slogans wel icons lkoll alik tbh
+
+    

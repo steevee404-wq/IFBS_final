@@ -1,0 +1,223 @@
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Placeholder image blocks — swap the <img src> for real photos */
+.imgbox {
+  position: relative;
+  background: var(--main);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/* Desktop-only nudge: offsets the image within its grid column
+   for visual interest. Intentionally not applied on mobile
+   (see media query below), where it caused the misaligned/
+   "crooked" look against the full-width text stacked above it. */
+@media (min-width: 861px) {
+  .imgbox {
+    margin-left: 8vw;
+  }
+}
+
+.imgbox::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(250, 247, 240, 0.55);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px dashed rgba(250, 247, 240, 0.25);
+  margin: 10px;
+  pointer-events: none;
+}
+
+.imgbox img {
+  opacity: 0;
+} /* remove this line once a real image is placed */
+
+.imgbox:has(img[src]:not([src=""]))::after {
+  display: none;
+}
+
+.imgbox:has(img[src]:not([src=""])) img {
+  opacity: 1;
+}
+
+/* ---------- Intro: text + checklist | image ---------- */
+.intro {
+  padding: 96px 0 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.intro h2 {
+  font-size: clamp(30px, 3.6vw, 46px);
+  font-weight: 500;
+  color: var(--main);
+  line-height: 1.14;
+  margin: 0 0 26px;
+}
+
+.intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--main-lighter);
+  margin: 0 0 30px;
+  max-width: 52ch;
+}
+
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 30px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--main);
+}
+
+.checklist li::before {
+  content: "✓";
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--main);
+  color: var(--gold);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.intro .imgbox {
+  aspect-ratio: 3/4;
+}
+
+/* ---------- Feature: image | text ---------- */
+.feature {
+  padding: 0 0 96px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.feature .imgbox {
+  aspect-ratio: 4/3.2;
+}
+
+.feature-copy .eyebrow {
+  color: var(--gold);
+}
+
+.feature-copy h2 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 500;
+  color: var(--main);
+  line-height: 1.16;
+  margin: 0 0 22px;
+}
+
+.feature-copy p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--main-lighter);
+  margin: 0;
+  max-width: 56ch;
+}
+
+/* ---------- Full-width statement ---------- */
+.statement {
+  background: beige;
+  padding: 20px 0 100px;
+  text-align: center;
+  margin-bottom: 12vh;
+}
+
+.statement .eyebrow {
+  justify-content: center;
+  display: flex;
+}
+
+.statement h2 {
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 500;
+  color: var(--main);
+  line-height: 1.22;
+  margin: 0 auto 26px;
+  max-width: 26ch;
+}
+
+.statement p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--main-lighter);
+}
+
+@media (max-width: 860px) {
+  .intro-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature .imgbox {
+    order: -1;
+  }
+  .checklist {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Scroll Reveal Animations ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animations slightly so they cascade cleanly */
+.eyebrow.reveal { transition-delay: 0s; }
+h2.reveal { transition-delay: 0.1s; }
+p.reveal { transition-delay: 0.2s; }
+ul.checklist.reveal { transition-delay: 0.3s; }
+.cta-btn.reveal { transition-delay: 0.2s; }

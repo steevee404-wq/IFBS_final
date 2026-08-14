@@ -1,0 +1,129 @@
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+h1,
+h2,
+h3,
+.display {
+  font-family: "Fraunces", serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* ================= INTRO ================= */
+.intro {
+  padding: 88px 0 56px;
+  text-align: center;
+}
+.intro .eyebrow {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.intro .eyebrow::before,
+.intro .eyebrow::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+.intro h2 {
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--main);
+  max-width: 24ch;
+  margin: 0 auto 18px;
+}
+.intro p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  max-width: 62ch;
+  margin: 0 auto;
+}
+
+/* ================= SUPPORT ROWS (text-only, single column) ================= */
+.support {
+  padding: 10px 0 30px;
+}
+
+.support-row {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 46px 0;
+  border-bottom: 1px solid rgba(0, 33, 71, 0.1);
+}
+.support-row:last-child {
+  border-bottom: none;
+}
+
+.support-index {
+  display: block;
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.support-row h3 {
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 500;
+  color: var(--main);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.support-row p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #4a4a4a;
+}
+
+/* ================= CONTACT STRIP ================= */
+.support-contact {
+  background: var(--cream);
+  padding: 70px 0;
+  margin: 24px 0 0;
+  text-align: center;
+}
+.support-contact h3 {
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 500;
+  color: var(--main);
+  margin-bottom: 14px;
+}
+.support-contact p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  max-width: 56ch;
+  margin: 0 auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .support-row {
+    padding: 34px 0;
+  }
+}

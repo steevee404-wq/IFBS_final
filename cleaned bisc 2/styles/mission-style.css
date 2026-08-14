@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: white;
+}
+
+img,
+.placeholder-img {
+  max-width: 100%;
+  display: block;
+}
+
+.placeholder-img {
+  background: repeating-linear-gradient(
+    45deg,
+    #e4e4e4,
+    #e4e4e4 10px,
+    #ececec 10px,
+    #ececec 20px
+  );
+  border: 1px solid #d5d5d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9a9a9a;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: var(--sans);
+  width: 100%;
+}
+
+/* ============ SECTION 1 : OUR AIMS INTRO + CARDS ============ */
+
+.aims-section {
+  padding: 80px 24px 90px;
+  text-align: center;
+  background: white;
+}
+
+.aims-section h2 {
+  font-family: var(--serif);
+  color: var(--main);
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+
+.aims-intro {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.aims-cards {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.aim-card {
+  background: var(--main);
+  color: #f4e9ec;
+  padding: 40px 32px 44px;
+  border-radius: 2px;
+}
+
+.aim-card .icon {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 22px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.aim-card h3 {
+  font-family: var(--sans);
+  color: var(--gold-light);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 22px;
+  font-weight: 700;
+}
+
+.aim-card p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #efe0e5;
+  margin: 0 0 20px;
+}
+
+.aim-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============ SECTION 2 : VISION / MISSION ============ */
+
+.vm-section {
+  background: var(--grey-bg);
+  padding: 80px 24px;
+}
+
+.vm-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.vm-text .eyebrow {
+  display: inline-block;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--main);
+  font-size: 1rem;
+  margin-bottom: 18px;
+  position: relative;
+  padding-top: 18px;
+}
+
+.vm-text .eyebrow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.vm-text h3 {
+  font-family: var(--serif);
+  color: var(--main);
+  font-size: 2.1rem;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+.vm-text p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ink);
+  margin: 0 0 30px;
+}
+
+.vm-divider {
+  border: none;
+  border-top: 1px solid #d8d3d0;
+  margin: 0 0 30px;
+}
+
+.vm-block:last-child p {
+  margin-bottom: 0;
+}
+
+.vm-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.vm-images .tall {
+  aspect-ratio: 3 / 4;
+}
+
+.vm-images .stack {
+  display: grid;
+  gap: 16px;
+}
+
+.vm-images .square {
+  aspect-ratio: 1 / 1;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 900px) {
+  .aims-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .aims-section {
+    padding: 60px 20px 60px;
+  }
+
+  .aims-section h2 {
+    font-size: 2.1rem;
+  }
+
+  .vm-wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .vm-images {
+    order: -1;
+  }
+
+  .vm-section {
+    padding: 56px 20px;
+  }
+
+  .vm-text h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aims-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .aim-card {
+    padding: 32px 22px 36px;
+  }
+
+  .vm-images {
+    grid-template-columns: 1fr 1fr;
+  }
+}
