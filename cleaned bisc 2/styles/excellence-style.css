@@ -243,7 +243,6 @@ h1 em {
      shows through unbroken across all four cards */
 .image-ph {
   position: relative;
-  width: 60%;
   height:60%;
   aspect-ratio: 1/1;
   background: transparent;
@@ -252,6 +251,9 @@ h1 em {
   align-items: center;
   justify-content: center;
   transition: border-color 0.35s ease;
+}
+.bro{
+  width: 100%;
 }
 .card:hover .image-ph {
   border-color: rgba(245, 245, 220, 0.3);
@@ -265,7 +267,10 @@ h1 em {
     color 0.35s ease,
     opacity 0.35s ease;
 }
-
+.broo{
+  margin-top: 200px;
+    width: 100%;
+}
 .image-ph .ph-label {
   position: absolute;
   bottom: 10px;
