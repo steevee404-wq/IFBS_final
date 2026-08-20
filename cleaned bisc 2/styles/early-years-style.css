@@ -28,8 +28,9 @@
     font-size: 0.8rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    width: 100%;
+    width: 80vh;
     aspect-ratio: 16 / 9;
+    margin-left: 4%;
   }
 
   /* ============ INTRO ============ */
