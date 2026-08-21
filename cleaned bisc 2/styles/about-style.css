@@ -262,7 +262,7 @@ html, body {
     align-items: center;
     margin-bottom: 80px; 
 }
-.values-overlay { background-color: rgba(104, 27, 60, 0.85); max-width: 1200px; width: 100%; padding: 60px 40px; text-align: center; color: white; }
+.values-overlay { background-color:#00214794; ; max-width: 1200px; width: 100%; padding: 60px 40px; text-align: center; color: white; }
 .values-desc { font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
 .values-row { display: flex; justify-content: center; gap: 8vw; flex-wrap: wrap; font-family: "Fraunces", serif; font-size: clamp(24px, 4vw, 36px); color: var(--gold); margin-top: 40px; }
 

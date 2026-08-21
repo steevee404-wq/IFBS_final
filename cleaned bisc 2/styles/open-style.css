@@ -1,0 +1,291 @@
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+h1,
+h2,
+h3,
+.display {
+  font-family: "Fraunces", serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* image placeholder — same convention used across the site */
+.frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--main);
+}
+.frame::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  color: rgba(245, 245, 220, 0.4);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px dashed rgba(245, 245, 220, 0.22);
+  margin: 8px;
+  pointer-events: none;
+}
+.frame img {
+  opacity: 0;
+  transition: transform 0.7s ease;
+}
+.frame:has(img[src]:not([src=""]))::after {
+  display: none;
+}
+.frame:has(img[src]:not([src=""])) img {
+  opacity: 1;
+}
+.frame:hover img {
+  transform: scale(1.04);
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* ================= INTRO ================= */
+.intro {
+  padding: 88px 0 56px;
+  text-align: center;
+}
+.intro .eyebrow {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.intro .eyebrow::before,
+.intro .eyebrow::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+.intro h2 {
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--main);
+  max-width: 24ch;
+  margin: 0 auto 18px;
+}
+.intro p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  max-width: 62ch;
+  margin: 0 auto;
+}
+
+/* ================= SESSION SCHEDULE ================= */
+.schedule {
+  padding: 10px 0 90px;
+}
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.session-card {
+  background: #fff;
+  border: 1px solid rgba(0, 33, 71, 0.1);
+  border-radius: 4px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.session-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 40px -20px rgba(0, 33, 71, 0.25);
+}
+.session-date {
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.session-card h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--main);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.session-time {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13.5px;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.session-card p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+.session-link {
+  align-self: flex-start;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--main);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid var(--gold);
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.session-link:hover {
+  color: var(--gold);
+}
+
+/* ================= WHAT TO EXPECT — STEPS ================= */
+.steps {
+  background: var(--grey-bg);
+  padding: 90px 0;
+}
+.steps .intro {
+  padding: 0 0 56px;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  counter-reset: step;
+}
+.step {
+  position: relative;
+  padding-top: 10px;
+}
+.step-index {
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--gold-soft);
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+.step h4 {
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main);
+  margin-bottom: 10px;
+}
+.step p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #56575c;
+}
+
+/* ================= QUOTE BAND ================= */
+.quoteband {
+  background: var(--cream);
+  padding: 80px 0;
+  text-align: center;
+}
+.quoteband p {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(20px, 2.6vw, 30px);
+  line-height: 1.5;
+  color: var(--main);
+  max-width: 700px;
+  margin: 0 auto 18px;
+}
+.quoteband cite {
+  font-family: "Source Sans 3", sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+  padding: 90px 0;
+}
+.gallery .intro {
+  padding: 0 0 56px;
+}
+.masonry {
+  columns: 3 260px;
+  column-gap: 14px;
+}
+.masonry .frame {
+  margin: 0 0 14px;
+  break-inside: avoid;
+  border-radius: 2px;
+}
+.g1 {
+  height: 380px;
+}
+.g2 {
+  height: 250px;
+}
+.g3 {
+  height: 300px;
+}
+.g4 {
+  height: 220px;
+}
+.g5 {
+  height: 340px;
+}
+.g6 {
+  height: 270px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+  .masonry {
+    columns: 2 180px;
+  }
+}
+
+@media (max-width: 560px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}

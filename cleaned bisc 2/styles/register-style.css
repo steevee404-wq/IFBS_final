@@ -1,0 +1,331 @@
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+h1,
+h2,
+h3,
+h4,
+.display {
+  font-family: "Fraunces", serif;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* ================= INTRO ================= */
+.intro {
+  padding: 88px 0 56px;
+  text-align: center;
+}
+.intro .eyebrow {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.intro .eyebrow::before,
+.intro .eyebrow::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+.intro h2 {
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--main);
+  max-width: 26ch;
+  margin: 0 auto 18px;
+}
+.intro p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  max-width: 62ch;
+  margin: 0 auto;
+}
+
+/* ================= LAYOUT ================= */
+.register {
+  padding: 10px 0 100px;
+}
+.register-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* ================= FORM ================= */
+.register-form {
+  background: #fff;
+  border: 1px solid rgba(0, 33, 71, 0.1);
+  border-radius: 4px;
+  padding: 12px 44px 44px;
+}
+
+fieldset {
+  border: none;
+  border-bottom: 1px solid rgba(0, 33, 71, 0.1);
+  padding: 34px 0;
+}
+fieldset:last-of-type {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--main);
+  padding: 0;
+  margin-bottom: 22px;
+}
+.legend-index {
+  font-family: "Fraunces", serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--main);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+.form-row.two {
+  grid-template-columns: 1fr 1fr;
+}
+.form-row.three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field label {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--main);
+  letter-spacing: 0.01em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 14.5px;
+  color: var(--main);
+  background: var(--grey-bg);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 12px 14px;
+  width: 100%;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+textarea {
+  resize: vertical;
+  font-family: "Source Sans 3", sans-serif;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: #fff;
+}
+::placeholder {
+  color: #9a9aa1;
+}
+
+.checkbox-field {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 24px;
+}
+.checkbox-field input {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--main);
+  flex: none;
+}
+.checkbox-field label {
+  font-weight: 400;
+  font-size: 13.5px;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.register-submit {
+  margin-top: 34px;
+  background: var(--main);
+  color: var(--text-light);
+  border: 1.5px solid var(--main);
+  padding: 16px 44px;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.register-submit:hover {
+  background: transparent;
+  color: var(--main);
+}
+
+/* ================= SIDEBAR ================= */
+.register-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: sticky;
+  top: 24px;
+}
+.sidebar-card {
+  background: var(--grey-bg);
+  border-radius: 4px;
+  padding: 30px 28px;
+}
+.sidebar-card h4 {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: var(--main);
+  margin-bottom: 14px;
+}
+.sidebar-card p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #56575c;
+  margin-bottom: 14px;
+}
+
+.sidebar-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.sidebar-steps li {
+  display: flex;
+  gap: 12px;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+.sidebar-steps li span {
+  flex: none;
+  font-family: "Fraunces", serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.sidebar-link {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--main);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--gold);
+  padding-bottom: 3px;
+}
+.sidebar-link:hover {
+  color: var(--gold);
+}
+
+.sidebar-card.contact {
+  background: var(--main);
+}
+.sidebar-card.contact h4 {
+  color: var(--text-light);
+}
+.sidebar-card.contact p {
+  color: rgba(245, 245, 220, 0.75);
+}
+.sidebar-card.contact .contact-link {
+  display: block;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 14px;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+.sidebar-card.contact .contact-link:hover {
+  text-decoration: underline;
+}
+.sidebar-btn {
+  display: inline-block;
+  margin-top: 16px;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  padding: 12px 24px;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.sidebar-btn:hover {
+  background: var(--gold);
+  color: var(--main);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 960px) {
+  .register-layout {
+    grid-template-columns: 1fr;
+  }
+  .register-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .register-form {
+    padding: 4px 22px 32px;
+  }
+  .form-row.two,
+  .form-row.three {
+    grid-template-columns: 1fr;
+  }
+}

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/register-style.css">
     <title>International Franco-British School</title>
     <link rel="icon" type="image/png" href="../logo.png">
     <script src="../scripts/script.js" defer></script>
@@ -114,10 +115,217 @@
         </nav>
     </section>
 
-    <!-- Placeholder content -->
-    <section style="padding:6rem 1.5rem; text-align:center; font-family:'Source Sans 3', sans-serif;">
-        <h2 style="font-family:'Fraunces', serif;">Register</h2>
-        <p>This page is coming soon. Please check back later.</p>
+    <!-- INTRO -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">Admissions</div>
+            <h2>Register your child at IFBS</h2>
+            <p>Placeholder text — complete the form below to begin your child's application. Fields marked
+                with an asterisk (*) are required. Our admissions team will be in touch within two working
+                days of receiving your registration.</p>
+        </div>
+    </section>
+
+    <!-- REGISTRATION FORM -->
+    <section class="register">
+        <div class="wrap">
+            <div class="register-layout">
+
+                <form class="register-form" action="#" method="POST">
+
+                    <!-- STUDENT INFORMATION -->
+                    <fieldset>
+                        <legend><span class="legend-index">01</span> Student information</legend>
+
+                        <div class="form-row two">
+                            <div class="field">
+                                <label for="student-first-name">First name *</label>
+                                <input type="text" id="student-first-name" name="student-first-name" required>
+                            </div>
+                            <div class="field">
+                                <label for="student-last-name">Last name *</label>
+                                <input type="text" id="student-last-name" name="student-last-name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row three">
+                            <div class="field">
+                                <label for="student-dob">Date of birth *</label>
+                                <input type="date" id="student-dob" name="student-dob" required>
+                            </div>
+                            <div class="field">
+                                <label for="student-gender">Gender</label>
+                                <select id="student-gender" name="student-gender">
+                                    <option value="">Select</option>
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="student-nationality">Nationality *</label>
+                                <input type="text" id="student-nationality" name="student-nationality" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row two">
+                            <div class="field">
+                                <label for="student-grade">Applying for *</label>
+                                <select id="student-grade" name="student-grade" required>
+                                    <option value="">Select year group</option>
+                                    <option value="eyfs">Early Years (EYFS)</option>
+                                    <option value="y1-y6">Primary — Year 1 to Year 6</option>
+                                    <option value="y7-y9">Lower Secondary — Year 7 to Year 9</option>
+                                    <option value="y10-y11">Upper Secondary — Year 10 to Year 11</option>
+                                    <option value="advanced">Advanced Programme — A-Level / IGCSE</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="student-start">Intended start date</label>
+                                <input type="date" id="student-start" name="student-start">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- PARENT / GUARDIAN INFORMATION -->
+                    <fieldset>
+                        <legend><span class="legend-index">02</span> Parent / guardian information</legend>
+
+                        <div class="form-row two">
+                            <div class="field">
+                                <label for="parent1-name">Parent / guardian 1 full name *</label>
+                                <input type="text" id="parent1-name" name="parent1-name" required>
+                            </div>
+                            <div class="field">
+                                <label for="parent1-relationship">Relationship to student *</label>
+                                <input type="text" id="parent1-relationship" name="parent1-relationship" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row two">
+                            <div class="field">
+                                <label for="parent1-phone">Phone number *</label>
+                                <input type="tel" id="parent1-phone" name="parent1-phone" required>
+                            </div>
+                            <div class="field">
+                                <label for="parent1-email">Email address *</label>
+                                <input type="email" id="parent1-email" name="parent1-email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row two">
+                            <div class="field">
+                                <label for="parent2-name">Parent / guardian 2 full name</label>
+                                <input type="text" id="parent2-name" name="parent2-name">
+                            </div>
+                            <div class="field">
+                                <label for="parent2-phone">Phone number</label>
+                                <input type="tel" id="parent2-phone" name="parent2-phone">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="home-address">Home address *</label>
+                                <input type="text" id="home-address" name="home-address" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- ACADEMIC BACKGROUND -->
+                    <fieldset>
+                        <legend><span class="legend-index">03</span> Academic background</legend>
+
+                        <div class="form-row two">
+                            <div class="field">
+                                <label for="current-school">Current / previous school</label>
+                                <input type="text" id="current-school" name="current-school">
+                            </div>
+                            <div class="field">
+                                <label for="last-grade">Last grade completed</label>
+                                <input type="text" id="last-grade" name="last-grade">
+                            </div>
+                        </div>
+
+                        <div class="form-row two">
+                            <div class="field">
+                                <label for="home-language">Language(s) spoken at home</label>
+                                <input type="text" id="home-language" name="home-language">
+                            </div>
+                            <div class="field">
+                                <label for="hear-about">How did you hear about IFBS?</label>
+                                <select id="hear-about" name="hear-about">
+                                    <option value="">Select</option>
+                                    <option value="referral">Friend / family referral</option>
+                                    <option value="social">Social media</option>
+                                    <option value="search">Online search</option>
+                                    <option value="open-day">Open Day</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="support-needs">Special educational needs or support required</label>
+                                <textarea id="support-needs" name="support-needs" rows="3" placeholder="Placeholder text — let us know if your child has any learning support needs, allergies, or medical conditions we should be aware of."></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- ADDITIONAL COMMENTS -->
+                    <fieldset>
+                        <legend><span class="legend-index">04</span> Anything else?</legend>
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="comments">Additional comments</label>
+                                <textarea id="comments" name="comments" rows="3" placeholder="Placeholder text — anything else you'd like our admissions team to know."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field checkbox-field">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">I agree to IFBS's privacy policy and consent to being
+                                contacted regarding this application. *</label>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="register-submit">Submit registration</button>
+
+                </form>
+
+                <!-- SIDEBAR -->
+                <aside class="register-sidebar">
+
+                    <div class="sidebar-card">
+                        <h4>What happens next</h4>
+                        <ul class="sidebar-steps">
+                            <li><span>01</span> Our admissions team reviews your registration.</li>
+                            <li><span>02</span> We contact you to arrange a visit or assessment.</li>
+                            <li><span>03</span> You submit the required supporting documents.</li>
+                            <li><span>04</span> An offer is made and enrolment is confirmed.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h4>Before you apply</h4>
+                        <p>Placeholder text — check the list of required paperwork so you have everything
+                            ready.</p>
+                        <a href="admission-documents.html" class="sidebar-link">View required documents &rarr;</a>
+                    </div>
+
+                    <div class="sidebar-card contact">
+                        <h4>Need help with your application?</h4>
+                        <p>Placeholder text — our admissions team is happy to answer any questions.</p>
+                        <a class="contact-link" href="tel:+21698119811">(+216) 98 119 811</a>
+                        <a class="contact-link" href="mailto:admissions@ifbs.tn">admissions@ifbs.tn</a>
+                        <a href="../contact.html" class="sidebar-btn">Contact Admissions</a>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
     </section>
 
     <!-- CTA -->
