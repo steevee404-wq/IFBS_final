@@ -285,7 +285,89 @@ html, body {
 
 .teachers-section { padding: 100px 20px; background: #fff; }
 .teachers-grid { display: flex; justify-content: center; gap: 30px; margin: 60px auto; max-width: 1200px; flex-wrap: wrap; }
-.teacher-card img { width: 220px; height: 300px; object-fit: cover; border-radius: 120px 120px 10px 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+.teacher-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease;
+}
+
+.teacher-card:hover {
+    transform: translateY(-6px);
+}
+
+.teacher-card img,
+.teacher-photo-placeholder {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 120px 120px 10px 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: box-shadow 0.25s ease;
+}
+
+.teacher-card:hover img,
+.teacher-card:hover .teacher-photo-placeholder {
+    box-shadow: 0 20px 38px rgba(0,0,0,0.18);
+}
+
+.teacher-photo-placeholder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    background: repeating-linear-gradient(
+        45deg,
+        #e4e4e4,
+        #e4e4e4 10px,
+        #ececec 10px,
+        #ececec 20px
+    );
+    border: 1px solid #d5d5d5;
+    color: #9a9a9a;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.teacher-name {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--main);
+    margin-top: 18px;
+    text-align: center;
+}
+
+.teacher-role {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-top: 4px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .teacher-card,
+    .teacher-card img,
+    .teacher-photo-placeholder {
+        width: 180px;
+    }
+
+    .teacher-card img,
+    .teacher-photo-placeholder {
+        height: 245px;
+    }
+}
 
 /* ====================== CTA BANNER ====================== */
 .cta {
@@ -345,172 +427,10 @@ html, body {
     color: var(--gold);
 }
 
-/* ====================== FOOTER ====================== */
-footer {
-    background: var(--main);
-    color: var(--accent);
-    position: relative;
-    overflow: hidden;
-    height: 55vh;
-}
-
-footer::before {
-    content: "";
-    position: absolute;
-    left: -7.5rem;
-    bottom: -8.75rem;
-    width: 26.25rem;
-    height: 26.25rem;
-    border: 2px solid rgba(201, 162, 74, 0.08);
-    border-radius: 50%;
-}
-
-footer::after {
-    content: "";
-    position: absolute;
-    left: -2.5rem;
-    bottom: -2.5rem;
-    width: 17.5rem;
-    height: 17.5rem;
-    border: 1px solid rgba(201, 162, 74, 0.1);
-    border-radius: 50%;
-}
-
-.footer-inner {
-    position: relative;
-    z-index: 1;
-    max-width: 80rem;
-    margin: 0 0 0 15vw;
-    padding: 2.5rem 3rem 2.5rem 0;
-    display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr 1fr;
-    gap: 2.5rem;
-}
-
-.footer-brand .crest {
-    width: 8rem;
-    height: 8rem;
-    text-align: center;
-    margin-bottom: 5vh;
-    pointer-events: none;
-}
-
-.footer-brand .crest img {
-    width: 8vw;
-    margin: 0 0 0 1vw;
-}
-
-.footer-brand .school-name {
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.25rem;
-}
-
-.footer-brand .school-tag {
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-}
-
-.footer-brand address {
-    font-style: normal;
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 0.875rem;
-    line-height: 1.8;
-    color: var(--text-light);
-    margin-bottom: 1.25rem;
-}
-
-.footer-brand .contact-link {
-    display: block;
-    color: var(--text-light);
-    text-decoration: none;
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
-}
-
-.footer-brand .contact-link:hover {
-    color: var(--accent);
-}
-
-.socials {
-    display: flex;
-    gap: 0.625rem;
-    margin-top: 1.375rem;
-}
-
-.socials a {
-    width: 2.375rem;
-    height: 2.375rem;
-    border-radius: 50%;
-    background: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--main);
-    text-decoration: none;
-    font-family: "Source Sans 3", sans-serif;
-    font-weight: bold;
-    font-size: 0.875rem;
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.socials a:hover {
-    background: #ffda6a;
-    transform: translateY(-2px);
-}
-
-.footer-col h3 {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 1.25rem;
-    color: var(--text-light);
-    position: relative;
-    padding-bottom: 0.625rem;
-}
-
-.footer-col h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 1.875rem;
-    height: 2px;
-    background: var(--accent);
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col li {
-    margin-bottom: 0.8125rem;
-}
-
-.footer-col a {
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 0.875rem;
-    color: var(--text-light);
-    text-decoration: none;
-    transition: color 0.2s ease, padding-left 0.2s ease;
-}
-
-.footer-col a:hover {
-    color: var(--accent);
-    padding-left: 0.25rem;
-}
-
-.bg-logo-footer {
-    position: absolute;
-    z-index: -10;
-    width: 30vw;
-    margin: 14vh 0 0 -19vw;
-    opacity: 0.5;
-}
+/* Footer styling now lives entirely in style.css so every page (including
+   this one) shares one consistent, already-responsive footer. The block
+   that used to be here duplicated those rules with a fixed 55vh height,
+   which clipped the nav columns on smaller screens — removed. */
 
 /* ====================== ANIMATIONS ====================== */
 @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
@@ -522,7 +442,5 @@ footer::after {
     .img-left { margin-top: 40px; }
     .text-content { padding: 40px 20px; }
     .split-text { padding: 50px 20px; }
-    .footer-inner { grid-template-columns: 1fr; margin: 0; padding: 20px; }
     .values-row { gap: 4vw; }
-    .bg-logo-footer { display: none; } /* Hide the massive watermark on small screens */
 }

@@ -333,11 +333,11 @@ html, body {
 /* ====================== FOOTER ====================== */
 footer {
     background: var(--main);
-    color: var(--accent);
+    color: var(--text-light);
     position: relative;
     overflow: hidden;
     height: auto;
-    padding: 3.5rem 0;
+    padding: 3.5rem 0 0;
 }
 
 footer::before {
@@ -389,7 +389,9 @@ footer::after {
 }
 
 .footer-brand .school-name {
+    font-family: var(--serif);
     font-size: 1.2rem;
+    color: var(--text-light);
     letter-spacing: 0.5px;
     margin-bottom: 0.25rem;
 }
@@ -497,6 +499,19 @@ footer::after {
     width:30vw;
     margin:14vh 0 0 -19vw;
     opacity: 0.5;
+}
+
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+    padding: 1.25rem 3rem;
+    border-top: 1px solid rgba(245, 245, 220, 0.12);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    color: rgba(245, 245, 220, 0.65);
 }
 
 
@@ -693,6 +708,12 @@ footer::after {
 
     .bg-logo-footer {
         display: none; /* purely decorative watermark — just clutters small screens */
+    }
+
+    .footer-bottom {
+        margin-top: 2rem;
+        padding: 1rem 1.5rem;
+        font-size: 0.72rem;
     }
 }
 
