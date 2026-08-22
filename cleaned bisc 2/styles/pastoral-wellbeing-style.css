@@ -11,6 +11,14 @@
   overflow: hidden;
   border-radius: 2px;
 }
+.work{
+      height: 100%;
+
+}
+.workss{
+      width: 100%;
+
+}
 
 /* Desktop-only nudge: offsets the image within its grid column
    for visual interest. Intentionally not applied on mobile
