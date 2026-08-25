@@ -1,0 +1,196 @@
+:root {
+  --text-light: #f5f5dc;
+  --main-lighter: #0f4686;
+  --gold: #9a8029;
+  --gold-soft: #c6a862;
+  --gold-solid: #e0a92f;
+  --bg: #fdfcf9;
+  --ink: #16232f;
+  --muted: #5b6773;
+  --line: #e2ddd0;
+}
+
+/* ====================== INTRO ====================== */
+.cam-intro {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 100px 32px 20px;
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--ink);
+}
+
+.cam-intro .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+.cam-intro .eyebrow::before,
+.cam-intro .eyebrow::after {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.55;
+}
+
+.cam-intro h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: clamp(32px, 4.2vw, 50px);
+  line-height: 1.1;
+  text-align: center;
+  color: var(--main);
+  margin: 0 0 20px;
+}
+.cam-intro h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.cam-intro .lede {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ====================== TWO-COLUMN ROWS ====================== */
+.cam-row {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 60px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.cam-row.reverse .cam-row-media {
+  order: 2;
+}
+.cam-row.reverse .cam-row-text {
+  order: 2;
+}
+
+.cam-row-text h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: clamp(26px, 2.8vw, 34px);
+  color: var(--main);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.cam-row-text p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.cam-row-text p + p {
+  margin-top: 14px;
+}
+
+.cam-row-text a {
+  color: var(--main);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cam-row-media img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px -18px rgba(0, 33, 71, 0.3);
+}
+
+/* ====================== SOLID GOLD CONNECTIVITY BAND ====================== */
+.cam-band {
+  background: var(--gold-solid);
+  padding: 88px 32px;
+  text-align: center;
+}
+
+.cam-band .band-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.cam-band h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: clamp(28px, 3.4vw, 40px);
+  color: var(--main);
+  margin-bottom: 22px;
+}
+
+.cam-band p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: #4a3410;
+  margin-bottom: 36px;
+}
+
+.cam-band a.inline-link {
+  color: var(--main);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cam-band-btn {
+  display: inline-block;
+  background: var(--main);
+  color: var(--text-light);
+  border: 1.5px solid var(--main);
+  padding: 16px 42px;
+  font-size: 13.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cam-band-btn:hover {
+  background: transparent;
+  color: var(--main);
+}
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 900px) {
+  .cam-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 24px;
+  }
+  .cam-row.reverse .cam-row-media,
+  .cam-row.reverse .cam-row-text {
+    order: initial;
+  }
+  .cam-row-media img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cam-intro {
+    padding: 64px 20px 12px;
+  }
+  .cam-band {
+    padding: 60px 20px;
+  }
+}
