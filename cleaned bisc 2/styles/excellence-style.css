@@ -1,10 +1,8 @@
 :root{
-    --text-light: #f5f5dc;
-    --main-lighter: #0f4686;
-    --gold: #9a8029;
+    /* --text-light, --main-lighter, --gold, and --ink already match the
+       global tokens in style.css and no longer need to be redeclared here. */
     --bg: #fdfcf9;
-    --ink: #16232f;
-    --muted: #5b6773;
+    --muted: #5b6773; /* intentionally overrides the global --muted for this page */
     --line: #e2ddd0;
   }
 * {

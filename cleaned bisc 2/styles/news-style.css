@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --ink: #16232f;
-}
-
 body {
   margin: 0;
   font-family: var(--sans);

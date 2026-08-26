@@ -1,0 +1,154 @@
+/* ======================================================================
+   SHARED.CSS
+   Component patterns that were being copy-pasted, byte-for-byte, across
+   many page-specific stylesheets (intro headers, image-placeholder
+   "frames", masonry galleries, quote bands, heading font-family reset).
+   Imported with @import at the top of any stylesheet that needs it —
+   no HTML changes required. Each importing file only keeps the bits
+   that differ for its page (a padding value, a max-width, etc).
+   ====================================================================== */
+
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+h1, h2, h3, h4, .display {
+  font-family: "Fraunces", serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= EYEBROW / INTRO HEADER ================= */
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.intro {
+  text-align: center;
+}
+.intro .eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.intro .eyebrow::before,
+.intro .eyebrow::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+.intro h2 {
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--main);
+  margin: 0 auto;
+}
+.intro p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  max-width: 62ch;
+  margin: 0 auto;
+}
+
+/* ================= IMAGE-PLACEHOLDER "FRAME" ================= */
+.frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--main);
+}
+.frame::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  color: rgba(245, 245, 220, 0.4);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px dashed rgba(245, 245, 220, 0.22);
+  margin: 8px;
+  pointer-events: none;
+}
+.frame img {
+  opacity: 0;
+  transition: transform 0.7s ease;
+}
+.frame:has(img[src]:not([src=""]))::after {
+  display: none;
+}
+.frame:has(img[src]:not([src=""])) img {
+  opacity: 1;
+}
+.frame:hover img {
+  transform: scale(1.04);
+}
+
+.masonry {
+  columns: 3 260px;
+  column-gap: 14px;
+}
+.masonry .frame {
+  margin: 0 0 14px;
+  break-inside: avoid;
+  border-radius: 2px;
+}
+
+.gallery {
+  padding: 90px 0;
+}
+
+/* ================= QUOTE BAND ================= */
+.quoteband {
+  background: var(--cream);
+  padding: 80px 0;
+  text-align: center;
+}
+.quoteband p {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(20px, 2.6vw, 30px);
+  line-height: 1.5;
+  color: var(--main);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================= HEADING FADE-IN ================= */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.h2-fade {
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}

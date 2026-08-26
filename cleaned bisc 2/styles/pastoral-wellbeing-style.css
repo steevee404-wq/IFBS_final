@@ -1,8 +1,4 @@
-.wrap {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
+@import url("shared.css"); /* provides .wrap, shared with the rest of the site */
 
 /* Placeholder image blocks — swap the <img src> for real photos */
 .imgbox {
