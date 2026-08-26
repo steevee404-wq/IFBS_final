@@ -69,14 +69,14 @@
   gap: 10px;
 }
 .doc-text p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 14.5px;
   line-height: 1.65;
   color: #56575c;
   max-width: 56ch;
 }
 .doc-tag {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -93,7 +93,7 @@
   text-align: center;
 }
 .doc-contact-cta p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 16px;
   color: #4a4a4a;
   margin-bottom: 24px;
@@ -104,7 +104,7 @@
   color: var(--text-light);
   border: 1.5px solid var(--main);
   padding: 16px 40px;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.1em;

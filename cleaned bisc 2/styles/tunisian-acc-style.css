@@ -1,11 +1,12 @@
 :root {
-  --text-light: #f5f5dc;
-  --main-lighter: #0f4686;
-  --gold: #9a8029;
-  --gold-soft: #c6a862;
+  /* --text-light, --main-lighter, --gold, and --gold-soft already match
+     the global tokens in style.css and no longer need to be redeclared
+     here — this page used to pin its own amber/gold values, which had
+     drifted out of sync with the rest of the site's navy/silver
+     palette. */
   --bg: #fdfcf9;
   --ink: #16232f;
-  --muted: #5b6773;
+  --muted: #5b6773; /* intentionally overrides the global --muted for this page */
   --line: #e2ddd0;
 }
 
@@ -14,7 +15,7 @@
   max-width: 1180px;
   margin: 0 auto;
   padding: 100px 32px 40px;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   color: var(--ink);
 }
 
@@ -40,7 +41,7 @@
 }
 
 .acc-intro h1 {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-weight: 500;
   font-size: clamp(32px, 4.2vw, 50px);
   line-height: 1.1;
@@ -81,7 +82,7 @@
 }
 
 .acc-row-text h2 {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-weight: 500;
   font-size: clamp(26px, 2.8vw, 34px);
   color: var(--main);
@@ -90,7 +91,7 @@
 }
 
 .acc-row-text p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 16px;
   line-height: 1.75;
   color: var(--muted);
@@ -119,7 +120,7 @@
 
 /* ====================== BENEFITS BAND ====================== */
 .acc-band {
-  background: #f6efdc;
+  background: var(--grey-bg);
   padding: 80px 32px;
   margin-top: 40px;
   text-align: center;
@@ -131,7 +132,7 @@
 }
 
 .acc-band h2 {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-weight: 500;
   font-size: clamp(26px, 3vw, 36px);
   color: var(--main);
@@ -139,10 +140,10 @@
 }
 
 .acc-band > .band-inner > p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 16px;
   line-height: 1.7;
-  color: #5c4c1f;
+  color: var(--muted);
   max-width: 760px;
   margin: 0 auto 48px;
 }
@@ -156,14 +157,14 @@
 }
 
 .acc-point {
-  background: #fffdf7;
+  background: #ffffff;
   border: 1px solid var(--line);
   border-top: 3px solid var(--gold);
   padding: 28px 24px;
 }
 
 .acc-point .num {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-size: 28px;
   color: var(--gold);
   margin-bottom: 10px;
@@ -171,7 +172,7 @@
 }
 
 .acc-point h3 {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 16px;
   font-weight: 700;
   color: var(--main);
@@ -180,7 +181,7 @@
 }
 
 .acc-point p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 14.5px;
   line-height: 1.6;
   color: var(--muted);

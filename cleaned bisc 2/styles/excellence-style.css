@@ -11,7 +11,7 @@
 body {
   margin: 0;
   background: var(--bg);
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
 }
@@ -44,7 +44,7 @@ body {
 }
 
 h1 {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-weight: 500;
   font-optical-sizing: auto;
   font-size: clamp(34px, 4.4vw, 54px);
@@ -295,7 +295,7 @@ h1 em {
   display: inline-flex;
   align-items: baseline;
   gap: 3px;
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-weight: 500;
   font-size: 15px;
   color: var(--main);
@@ -310,7 +310,7 @@ h1 em {
     background-color 0.35s ease;
 }
 .badge span {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -327,7 +327,7 @@ h1 em {
 }
 
 h3 {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-weight: 500;
   font-size: 22px;
   line-height: 1.25;
@@ -404,7 +404,7 @@ p.desc {
 }
 .cta p strong {
   display: block;
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-size: 19px;
   color: #fff;
   font-weight: 500;

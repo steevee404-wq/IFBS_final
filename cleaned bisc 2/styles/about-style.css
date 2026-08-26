@@ -9,14 +9,14 @@
 .layout-container { display: flex; max-width: 1100px; width: 100%; gap: 80px; padding: 20px; margin: 0 auto; }
 .content-column { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 .subtitle { color: var(--main); font-size: 13px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 15px; }
-.title { color: var(--main); font-family: "Fraunces", serif; font-size: 48px; font-weight: 700; margin-bottom: 25px; opacity: 0; }
+.title { color: var(--main); font-family: var(--serif); font-size: 48px; font-weight: 700; margin-bottom: 25px; opacity: 0; }
 .title.start-animation { animation: fadeIn 1.5s ease-in-out forwards; }
 .description { color: #4a4a4a; font-size: 15px; line-height: 1.6; margin-bottom: 45px; max-width: 95%; }
 .features-grid { display: flex; gap: 80px; }
 .feature-col { display: flex; flex-direction: column; gap: 18px; }
 .feature-item { display: flex; align-items: center; gap: 12px; }
 .check-mark { color: #2b3176; font-size: 16px; font-weight: 700; }
-.feature-text { color: #4a4a4a; font-family: "Fraunces", serif; font-size: 16px; }
+.feature-text { color: #4a4a4a; font-family: var(--serif); font-size: 16px; }
 
 .image-column { flex: 1; display: flex; gap: 20px; align-items: flex-start; }
 .img-wrapper { overflow: hidden; display: flex; width: 50%; transform: scale(0.05); opacity: 0; transform-origin: center; }
@@ -38,13 +38,13 @@
 .image-cycler img.active { opacity: 1; }
 .text-content { flex: 1; background-color: var(--main); color: #ffffff; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
 .text-gold { color: var(--gold) !important; }
-.text-content .main-title { font-family: "Fraunces", serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
+.text-content .main-title { font-family: var(--serif); font-size: 34px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
 .intro-text, .sub-text { margin-bottom: 15px; line-height: 1.5; font-size: 14px; color: #ffffff; }
 .features-list { margin: 20px 0; }
 .feature-row { display: flex; gap: 15px; margin-bottom: 15px; } 
 .check-mark-gold { color: var(--gold); font-weight: bold; font-size: 18px; }
 .feature-info { display: flex; flex-direction: column; }
-.feature-title { font-weight: 700; font-size: 18px; font-family: "Fraunces", serif; margin-bottom: 5px; }
+.feature-title { font-weight: 700; font-size: 18px; font-family: var(--serif); margin-bottom: 5px; }
 .feature-desc { font-size: 13px; opacity: 0.9; line-height: 1.4; color: #ffffff; }
 .footer-note { font-size: 13px; margin-top: 5px; line-height: 1.5; color: #ffffff; }
 
@@ -67,7 +67,7 @@
 }
 .values-overlay { background-color:#00214794; ; max-width: 1200px; width: 100%; padding: 60px 40px; text-align: center; color: white; }
 .values-desc { font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
-.values-row { display: flex; justify-content: center; gap: 8vw; flex-wrap: wrap; font-family: "Fraunces", serif; font-size: clamp(24px, 4vw, 36px); color: var(--gold); margin-top: 40px; }
+.values-row { display: flex; justify-content: center; gap: 8vw; flex-wrap: wrap; font-family: var(--serif); font-size: clamp(24px, 4vw, 36px); color: var(--gold); margin-top: 40px; }
 
 .box-layout { max-width: 1200px; margin: 0 auto 80px auto; gap: 0; }
 .split-section { display: flex; width: 100%; min-height: 500px; background-color: #fff; }
@@ -78,7 +78,7 @@
 .bg-white { background-color: #ffffff; color: #4a4a4a; }
 .align-center { align-items: center; text-align: center; }
 
-.motto-banner { background-color: var(--gold); color: #222; text-align: center; padding: 70px 20px; font-family: "Fraunces", serif; font-size: clamp(36px, 5vw, 64px); }
+.motto-banner { background-color: var(--gold); color: #222; text-align: center; padding: 70px 20px; font-family: var(--serif); font-size: clamp(36px, 5vw, 64px); }
 
 .school-aims { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/aims-bg.jpg'); background-size: cover; padding: 100px 20px; color: white; }
 .aims-content { max-width: 1000px; margin: 0 auto; }
@@ -133,14 +133,14 @@
     );
     border: 1px solid #d5d5d5;
     color: #9a9a9a;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: var(--sans);
     font-size: 0.72rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
 .teacher-name {
-    font-family: "Fraunces", serif;
+    font-family: var(--serif);
     font-weight: 600;
     font-size: 1.05rem;
     color: var(--main);
@@ -149,7 +149,7 @@
 }
 
 .teacher-role {
-    font-family: "Source Sans 3", sans-serif;
+    font-family: var(--sans);
     font-size: 0.78rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;

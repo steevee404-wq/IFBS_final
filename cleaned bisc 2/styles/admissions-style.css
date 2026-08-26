@@ -43,7 +43,7 @@
   border-radius: 50%;
   background: var(--main);
   color: var(--accent);
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -63,7 +63,7 @@
   margin-bottom: 8px;
 }
 .timeline-content p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 15px;
   line-height: 1.7;
   color: #4a4a4a;
@@ -93,7 +93,7 @@
   margin-bottom: 10px;
 }
 .key-info-card p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 14.5px;
   line-height: 1.7;
   color: #56575c;
