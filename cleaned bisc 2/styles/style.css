@@ -1,17 +1,26 @@
 
 :root {
     --main: #002147;
-    --accent: #ffc107;
+
+    /* Replace yellow/gold with silver/white */
+    --accent: #e5e7eb;
+    --gold: #9ca3af;
+    --gold-soft: #d1d5db;
+
+    /* Existing light colors */
     --text-light: #f5f5dc;
-    --main-lighter: #0f4686;
-    --gold: #9a8029;
-    --gold-soft: #c6a862;
     --cream: #f5f5dc;
+
+    /* Navy palette */
+    --main-lighter: #0f4686;
     --navy: #002147;
     --navy-deep: #001530;
-     --muted: #6b6470;
+
+    /* Neutral colors */
+    --muted: #6b7280;
     --grey-bg: #f2f2f2;
     --ink: #16232f;
+
     --serif: "Georgia", "Iowan Old Style", "Palatino Linotype", serif;
     --sans: "Helvetica Neue", Arial, sans-serif;
 }
