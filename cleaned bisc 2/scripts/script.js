@@ -33,3 +33,36 @@ function keepDropdown(id){
     let item = document.getElementById(id);
     item.style.display = "block";
 }
+
+// ---------------------------------------------------------------
+// Persistent mobile "home" button
+//
+// The desktop nav already has a logo <li> inside .mainul that links
+// back to index.html — but on mobile that whole <ul> becomes an
+// off-canvas panel that's translated out of view until the hamburger
+// is opened, so the logo (and the way back home) disappears with it.
+//
+// Rather than hard-code a relative path per page (root pages use
+// "index.html"/"assets/logo.png", subfolder pages use
+// "../index.html"/"../assets/logo.png"), we clone the logo link that's
+// already correctly wired up in each page's own markup and place the
+// clone directly inside <nav class="main-menu">, as a sibling of
+// .mainul rather than a child of it — that way it sits outside the
+// panel's slide transform and stays visible (and tappable) at all
+// times on mobile, styled as a round button via CSS.
+// ---------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    var logoImg = document.querySelector(".mainul .menu-logo");
+    var mainMenu = document.querySelector(".main-menu");
+    var mainul = document.querySelector(".mainul");
+    if (!logoImg || !mainMenu || !mainul) return;
+
+    var logoLink = logoImg.closest("a");
+    if (!logoLink) return;
+
+    var homeBtn = logoLink.cloneNode(true);
+    homeBtn.classList.add("mobile-logo-btn");
+    homeBtn.setAttribute("aria-label", "Go to homepage");
+
+    mainMenu.insertBefore(homeBtn, mainul);
+});

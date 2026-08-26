@@ -180,6 +180,13 @@ html, body {
     height: auto;
 }
 
+/* Injected by script.js for mobile only — hidden by default so it has
+   no effect on desktop, where the nav's own logo item is already
+   visible inline. */
+.mobile-logo-btn {
+    display: none;
+}
+
 /* Dropdown now anchors to its own parent <li> */
 .mainul li.has-dropdown {
     position: relative;
@@ -573,6 +580,52 @@ footer::after {
         display: flex;
     }
 
+    /* Persistent top-middle "home" button for mobile — see script.js,
+       which clones the nav's logo link (already wired to the right
+       relative index.html/logo.png path on every page) into .main-menu
+       as a sibling of .mainul, so it sits outside the sliding panel's
+       transform and stays visible and tappable at all times. */
+    .mobile-logo-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 12;
+        width: 4.5rem;
+        height: 4.5rem;
+        padding: 0.5rem;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        box-shadow: 0 3px 14px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-logo-btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .mobile-logo-btn:hover {
+        background: #ffffff;
+    }
+
+    .mobile-logo-btn:active {
+        transform: translateX(-50%) scale(0.93);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Hide it while the panel is open — the panel already shows its own
+       logo at the top, so avoid two overlapping buttons. */
+    .nav-toggle-checkbox:checked ~ .main-menu .mobile-logo-btn {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     /* The .mainul itself becomes the slide-in panel; the logo item is
        pulled out of flow and pinned in the header bar via order. */
     .mainul {
@@ -616,6 +669,11 @@ footer::after {
         width: 100%;
         padding: 0.9rem 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        /* These headers aren't links on mobile (their dropdown is always
+           expanded below), so drop the pointer affordance and the tap
+           flash that came with it. */
+        cursor: default;
+        -webkit-tap-highlight-color: transparent;
     }
 
     /* Dropdowns become static, always-expanded sub-lists instead of hover flyouts,
@@ -631,10 +689,33 @@ footer::after {
         box-shadow: none;
         border-radius: 4px;
         animation: none !important;
+        /* .dropdown inherited cursor:pointer from the desktop rule, and
+           still carries onmouseenter/onmouseleave attributes from the
+           desktop hover logic. On touch browsers that combination made
+           the ENTIRE dropdown box (i.e. the whole sub-<ul>) light up with
+           the default grey tap-highlight whenever any part of it was
+           tapped. Neutralise both so only the actual link a person taps
+           gets a highlight. */
+        cursor: default;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .dropdown ul li {
-        padding: 0.6rem 0.5rem;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* The link itself — not just the padded <li> around it — is what's
+       actually tappable, so make it fill the full row at a comfortable
+       touch-target size (~44px tall) instead of hugging the text. */
+    .dropdown ul li a {
+        display: block;
+        width: 100%;
+        padding: 0.95rem 0.75rem;
+        min-height: 2.75rem;
+        color: var(--accent);
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
     }
 
     .dropdown ul li:hover {
@@ -642,7 +723,10 @@ footer::after {
         color: var(--accent);
     }
 
-    .dropdown ul li a {
+    /* Explicit, correctly-scoped feedback on tap, replacing the browser's
+       default highlight that used to bleed across the whole dropdown. */
+    .dropdown ul li a:active {
+        background: var(--main-lighter);
         color: var(--accent);
     }
 
@@ -701,6 +785,12 @@ footer::after {
 
     .menu-logo {
         width: 4.5rem;
+    }
+
+    .mobile-logo-btn {
+        top: 0.85rem;
+        width: 3.75rem;
+        height: 3.75rem;
     }
 
     .cta .wrap {
