@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: var(--sans);
-  color: black;
+  color: var(--ink);
   background: white;
 }
 
@@ -58,7 +58,7 @@ form.contact-form {
   padding: 16px 18px;
   font-family: var(--sans);
   font-size: 0.98rem;
-  color: black;
+  color: var(--ink);
   background: white;
   resize: none;
   transition:
@@ -86,7 +86,7 @@ form.contact-form {
 .send-btn {
   align-self: flex-start;
   background: var(--main);
-  color: white;
+  color: var(--text-light);
   border: none;
   padding: 15px 42px;
   font-family: var(--sans);
@@ -101,7 +101,7 @@ form.contact-form {
 }
 
 .send-btn:hover {
-  background: #013266;
+  background: var(--main-lighter);
 }
 
 .send-btn:active {
@@ -193,7 +193,7 @@ form.contact-form {
   margin: 0;
   font-size: 0.98rem;
   line-height: 1.5;
-  color: black;
+  color: var(--ink);
 }
 
 .detail-link {
