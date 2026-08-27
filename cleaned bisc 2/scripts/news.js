@@ -10,10 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var modalTitle = document.getElementById("articleModalTitle");
     var modalDate = document.getElementById("articleModalDate");
     var modalBody = document.getElementById("articleModalBody");
+    var modalImg = document.getElementById("articleModalImg");
     var closeEls = modal.querySelectorAll("[data-close]");
     var lastFocused = null;
 
-    function openModal(card) {
+    function openModal(card,imgsrc) {
         var titleEl = card.querySelector("h3");
         var dateEl = card.querySelector(".event-date");
         var body = card.getAttribute("data-body") ||
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modalTitle.textContent = titleEl ? titleEl.textContent.trim() : "";
         modalDate.textContent = dateEl ? dateEl.textContent.trim() : "";
         modalBody.textContent = body;
+        modalImg.src=imgsrc;
 
         lastFocused = document.activeElement;
         modal.classList.add("open");
@@ -44,12 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".event-card").forEach(function (card) {
         var trigger = card.querySelector(".read-more-btn");
         var titleLink = card.querySelector(".event-title-link");
+        var imgsrc=card.querySelector(".event-card-img").src;
 
         [trigger, titleLink].forEach(function (el) {
             if (!el) return;
             el.addEventListener("click", function (e) {
                 e.preventDefault();
-                openModal(card);
+                openModal(card,imgsrc);
             });
         });
     });
