@@ -1,4 +1,4 @@
-// Powers the "Read more" popup on the News page.
+// Powers the "Read more" popup on the What's Happening at IFBS page.
 // Each .event-card carries its own placeholder article text in data-body,
 // so this just reads the card's title/date/body and drops them into the
 // shared modal markup instead of following a dead "#" link.

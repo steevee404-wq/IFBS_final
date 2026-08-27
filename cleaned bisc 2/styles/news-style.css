@@ -9,6 +9,10 @@ body {
   background: white;
 }
 
+#fair{
+  height: 50vh;
+  width: 100%;
+}
 .placeholder-img {
   background: repeating-linear-gradient(
     45deg,
