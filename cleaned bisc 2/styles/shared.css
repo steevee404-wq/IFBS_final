@@ -15,7 +15,7 @@
 }
 
 h1, h2, h3, h4, .display {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
 }
 
 img {
@@ -59,7 +59,7 @@ img {
   margin: 0 auto;
 }
 .intro p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 16px;
   line-height: 1.7;
   color: #4a4a4a;
@@ -125,7 +125,7 @@ img {
   text-align: center;
 }
 .quoteband p {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
   font-size: clamp(20px, 2.6vw, 30px);

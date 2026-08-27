@@ -94,7 +94,7 @@ body {
 }
 
 .read-more-btn:hover {
-  background: var(--main-dark);
+  background: var(--navy-deep);
 }
 
 /* ============ PAGINATION ============ */

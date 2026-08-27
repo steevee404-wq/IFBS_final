@@ -26,7 +26,7 @@
 
 .support-index {
   display: block;
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-size: 14px;
   letter-spacing: 0.15em;
   color: var(--gold);
@@ -41,7 +41,7 @@
   line-height: 1.2;
 }
 .support-row p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 15.5px;
   line-height: 1.75;
   color: #4a4a4a;
@@ -61,7 +61,7 @@
   margin-bottom: 14px;
 }
 .support-contact p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 15.5px;
   line-height: 1.7;
   color: #4a4a4a;

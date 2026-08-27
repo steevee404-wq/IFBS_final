@@ -32,7 +32,7 @@
   box-shadow: 0 24px 40px -20px rgba(0, 33, 71, 0.25);
 }
 .session-date {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -48,14 +48,14 @@
   margin-bottom: 10px;
 }
 .session-time {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 13.5px;
   letter-spacing: 0.03em;
   color: var(--muted);
   margin-bottom: 18px;
 }
 .session-card p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 15px;
   line-height: 1.7;
   color: #4a4a4a;
@@ -64,7 +64,7 @@
 }
 .session-link {
   align-self: flex-start;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -98,7 +98,7 @@
   padding-top: 10px;
 }
 .step-index {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-size: 40px;
   font-weight: 600;
   color: var(--gold-soft);
@@ -107,14 +107,14 @@
   display: block;
 }
 .step h4 {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-size: 18px;
   font-weight: 500;
   color: var(--main);
   margin-bottom: 10px;
 }
 .step p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 14.5px;
   line-height: 1.7;
   color: #56575c;
@@ -125,7 +125,7 @@
   margin: 0 auto 18px;
 }
 .quoteband cite {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-style: normal;
   font-size: 13px;
   letter-spacing: 0.08em;

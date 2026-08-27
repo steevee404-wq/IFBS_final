@@ -1,12 +1,12 @@
 :root {
-  --text-light: #f5f5dc;
-  --main-lighter: #0f4686;
-  --gold: #9a8029;
-  --gold-soft: #c6a862;
-  --gold-solid: #e0a92f;
+  /* --text-light, --main-lighter, --gold, and --gold-soft already match
+     the global tokens in style.css and no longer need to be redeclared
+     here — this page used to pin its own amber/gold values, which had
+     drifted out of sync with the rest of the site's navy/silver
+     palette. */
   --bg: #fdfcf9;
   --ink: #16232f;
-  --muted: #5b6773;
+  --muted: #5b6773; /* intentionally overrides the global --muted for this page */
   --line: #e2ddd0;
 }
 
@@ -15,7 +15,7 @@
   max-width: 1180px;
   margin: 0 auto;
   padding: 100px 32px 20px;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   color: var(--ink);
 }
 
@@ -41,7 +41,7 @@
 }
 
 .cam-intro h1 {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-weight: 500;
   font-size: clamp(32px, 4.2vw, 50px);
   line-height: 1.1;
@@ -82,7 +82,7 @@
 }
 
 .cam-row-text h2 {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-weight: 500;
   font-size: clamp(26px, 2.8vw, 34px);
   color: var(--main);
@@ -91,7 +91,7 @@
 }
 
 .cam-row-text p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 16px;
   line-height: 1.75;
   color: var(--muted);
@@ -116,9 +116,9 @@
   box-shadow: 0 20px 40px -18px rgba(0, 33, 71, 0.3);
 }
 
-/* ====================== SOLID GOLD CONNECTIVITY BAND ====================== */
+/* ====================== CONNECTIVITY BAND ====================== */
 .cam-band {
-  background: var(--gold-solid);
+  background: var(--grey-bg);
   padding: 88px 32px;
   text-align: center;
 }
@@ -129,7 +129,7 @@
 }
 
 .cam-band h2 {
-  font-family: "Fraunces", serif;
+  font-family: var(--serif);
   font-weight: 500;
   font-size: clamp(28px, 3.4vw, 40px);
   color: var(--main);
@@ -137,10 +137,10 @@
 }
 
 .cam-band p {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--sans);
   font-size: 16.5px;
   line-height: 1.8;
-  color: #4a3410;
+  color: var(--muted);
   margin-bottom: 36px;
 }
 
