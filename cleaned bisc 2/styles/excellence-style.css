@@ -1,8 +1,8 @@
 :root{
-    /* --text-light, --main-lighter, --gold, and --ink already match the
-       global tokens in style.css and no longer need to be redeclared here. */
+    /* --text-light, --main-lighter, --gold, --ink, and --muted already
+       match the global tokens in style.css and no longer need to be
+       redeclared here. */
     --bg: #fdfcf9;
-    --muted: #5b6773; /* intentionally overrides the global --muted for this page */
     --line: #e2ddd0;
   }
 * {

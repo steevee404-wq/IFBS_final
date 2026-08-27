@@ -98,7 +98,7 @@ body {
 }
 
 .read-more-btn:hover {
-  background: var(--navy-deep);
+  background: var(--main-lighter);
 }
 
 /* ============ PAGINATION ============ */

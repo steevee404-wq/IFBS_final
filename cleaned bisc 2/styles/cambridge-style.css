@@ -1,12 +1,11 @@
 :root {
-  /* --text-light, --main-lighter, --gold, and --gold-soft already match
-     the global tokens in style.css and no longer need to be redeclared
-     here — this page used to pin its own amber/gold values, which had
-     drifted out of sync with the rest of the site's navy/silver
+  /* --text-light, --main-lighter, --gold, --gold-soft, --ink, and
+     --muted already match the global tokens in style.css and no longer
+     need to be redeclared here — this page used to pin its own
+     amber/gold values (and a slightly different --muted gray), which
+     had drifted out of sync with the rest of the site's navy/silver
      palette. */
   --bg: #fdfcf9;
-  --ink: #16232f;
-  --muted: #5b6773; /* intentionally overrides the global --muted for this page */
   --line: #e2ddd0;
 }
 
