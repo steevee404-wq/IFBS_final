@@ -111,6 +111,12 @@ body {
     background: var(--main);
     isolation: isolate;
 }
+.hero>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .vidBG {
     position: absolute;
@@ -371,7 +377,7 @@ body {
 }
 .cta-btn:hover {
   background: var(--gold);
-  color: var(--gold);
+  color: var(--main);
 }
 
 
